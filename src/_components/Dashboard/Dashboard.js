@@ -4,6 +4,8 @@ import { MainLayout } from "../Layout/MainLayout"
 import {LineChart} from "../Charts"
 import {SeriesChart} from "../Charts"
 
+import searchIcon from "../../_assets/icons/search.svg"
+
 class Dashboard extends Component {
 	constructor(props) {
 		super(props)
@@ -178,7 +180,170 @@ class Dashboard extends Component {
 	        				</div>
 	        			</div>
 	        		</div>
+	        	</div>
+
+	        	<div className="row mt-5 payments">
+	        		<div className="col-lg-12">
+	        			<h3>Payments</h3>
+	        			<div className="row align-items-center">
+	        				<div className="col-lg-4">
+	        					<form className="form-inline pagination">
+	        						<label className="mr-2">Showing</label>
+	        						<select name="" className="form-control mr-2">
+	        							<option value="10">10</option>
+	        						</select>
+	        						<label>out of 500 payments</label>
+	        					</form>
+	        				</div>
+
+	        				<div className="col-lg-4 pl-md-0">
+	        					<div className="inner-addon left-addon">
+	        						<img src={searchIcon} className="mr-3" />
+	        						<input type="text" name="search" className="form-control" placeholder="Search payments" />
+	        					</div>
+	        				</div>
+
+	        				<div className="col-lg-4">
+	        					<div className="d-flex justify-content-end">
+	        						<form className="form-inline">
+	        							<label className="mr-3">Show</label>
+	        							<select name="filter" className="form-control">
+	        								<option value="all">All</option>
+	        								<option value="reconciled">Reconcilled</option>
+	        								<option value="un-reconciled">Un-reconcilled</option>
+	        							</select>
+	        						</form>
+	        					</div>
+	        				</div>
+	        			</div>
+	        		</div>
+
+	        		<div className="col-lg-12 mt-3">
+						<div className="table-responsive dashboard-table">
+							<table className="table">
+								<thead>
+									<tr>
+										<th>Item Type</th>
+										<th>Price</th>
+										<th>Transaction No</th>
+										<th>Time</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<div className="media align-self-center">
+												<div className="icon mr-4">VW</div>
+												<div className="media-body align-self-center">
+													Apple Mac Book 15" 250 SSD 12GB
+												</div>
+											</div>
+										</td>
+										<td>
+											<span>$73430</span>
+										</td>
+										<td>
+											<span>1234567890</span>
+										</td>
+										<td>
+											<span>12:30</span>
+										</td>
+										<td>
+											<div className="d-flex justify-content-between align-items-center">
+												<div className="list-status">
+													<div>
+														<span className="indicator success-bg"></span>
+														<span className="text-success">Success</span>
+													</div>
+												</div>
+
+												<div className="btn-group">
+												<a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													<i className="fas fa-angle-down"></i>
+												</a>
+													<div className="dropdown-menu dropdown-menu-right">
+													<button className="dropdown-item" type="button">Action</button>
+													<button className="dropdown-item" type="button">Action</button>
+													<button className="dropdown-item" type="button">Action</button>
+													</div>
+												</div>													
+											</div>
+										</td>
+									</tr>										
+									<tr>
+										<td>
+											<div className="media align-self-center">
+												<div className="icon mr-4">VW</div>
+												<div className="media-body align-self-center">
+													Apple Mac Book 15" 250 SSD 12GB
+												</div>
+											</div>
+										</td>
+										<td>
+											<span>$73430</span>
+										</td>
+										<td>
+											<span>1234567890</span>
+										</td>
+										<td>
+											<span>12:30</span>
+										</td>
+										<td>
+											<div className="d-flex justify-content-between align-items-center">
+												<div className="list-status">
+													<div>
+														<span className="indicator pending-bg"></span>
+														<span className="text-pending">Pending</span>
+													</div>
+												</div>
+
+												<div className="btn-group">
+												<a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													<i className="fas fa-angle-down"></i>
+												</a>
+													<div className="dropdown-menu dropdown-menu-right">
+													<button className="dropdown-item" type="button">Action</button>
+													<button className="dropdown-item" type="button">Action</button>
+													<button className="dropdown-item" type="button">Action</button>
+													</div>
+												</div>													
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+	        		</div>
+
+	        		<div className="col-lg-12 mt-3 bottom-pagination pb-5">
+	        			<div className="row align-items-center">
+		        			<div className="col-md-4">
+		        				<span>Showing 1 to 10 of 500 entries</span>
+		        			</div>
+
+		        			<div className="col-md-8">
+								<div className="d-flex justify-content-end">
+									<nav aria-label="...">
+										<ul className="pagination">
+											<li className="page-item disabled">
+											<a className="page-link" href="#" tabindex="-1">Previous</a>
+											</li>
+											<li className="page-item"><a className="page-link" href="#">1</a></li>
+											<li className="page-item active">
+											<a className="page-link" href="#">2 <span className="sr-only">(current)</span></a>
+											</li>
+											<li className="page-item">
+											<a className="page-link" href="#">Next</a>
+											</li>
+										</ul>
+									</nav>										
+								</div>        				
+		        			</div>
+		        		</div>
+	        		</div>
 	        	</div>	        	
+
 			</MainLayout>
 		)
 	}
