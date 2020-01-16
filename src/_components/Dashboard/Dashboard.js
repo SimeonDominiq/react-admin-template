@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { MainLayout } from "../Layout/MainLayout"
 
 class Dashboard extends Component {
 	constructor(props) {
@@ -6,7 +7,11 @@ class Dashboard extends Component {
 	}
 
 	render() {
-		return "Welcome to Dashboard";
+		return (
+			<MainLayout>
+	        	Dashboard
+			</MainLayout>
+		)
 	}
 }
 
